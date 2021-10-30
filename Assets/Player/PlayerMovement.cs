@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
-    public Animator animator;
     Vector2 movement;
 
     // Update is called once per frame
@@ -23,12 +22,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement(Vector2 move)
     {
-        // Collision detection
+        // Basic Collision detection
         if (move.magnitude < 0.00001f) return;
         RaycastHit2D[] results = new RaycastHit2D[16];
         int count = GetComponent<Rigidbody2D>().Cast(move, results, move.magnitude + 0.001f);
         if (count > 0)
         {
+            // Will be called when collide with anything
             print("collide!");
             return;
         }
@@ -36,31 +36,22 @@ public class PlayerMovement : MonoBehaviour
         // Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         
-        // WIP: Have object face direction of movement (rotate rectangle based on movement)
+        // Have object face direction of movement (rotate rectangle based on movement)
         // Change z-axis of rotation based on movement
 
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
         // Use Quaternions to do absolute rotations
-        if (moveHorizontal > 0) {
+        if (movement.x > 0) {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if (moveHorizontal < 0) {
+        if (movement.x < 0) {
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }   
-        if (moveVertical > 0) {
+        if (movement.y > 0) {
             transform.rotation = Quaternion.Euler(0, 0, 90);
         }
-        if (moveVertical < 0) {
+        if (movement.y < 0) {
             transform.rotation = Quaternion.Euler(0, 0, -90);
         }   
-
-        // Animation
-        //animator.SetFloat("Horizontal", movement.x);
-        //animator.SetFloat("Vertical", movement.y);
-
-        //animator.SetFloat("Speed", movement.sqrMagnitude); // sqr magnitude is more optimized than regular magnitude
 
     }
 
