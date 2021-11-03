@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 7260013}
   - component: {fileID: 7260015}
   - component: {fileID: 7260014}
+  - component: {fileID: 7260016}
   m_Layer: 9
   m_Name: Coin (2)
   m_TagString: Coin
@@ -222,6 +223,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7260016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7260012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b72a36811921c4685e83aefe70db22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTime: 0
+  startTimeAttack: 0
+  attackLocation: {fileID: 0}
+  attackRange: 0
+  Coin:
+    serializedVersion: 2
+    m_Bits: 0
+  scoreText: {fileID: 0}
+  scoreValue: 0
 --- !u!1 &290378276
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +255,7 @@ GameObject:
   - component: {fileID: 290378279}
   - component: {fileID: 290378278}
   - component: {fileID: 290378277}
+  - component: {fileID: 290378280}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Coin
@@ -321,6 +344,27 @@ Transform:
   m_Father: {fileID: 1465184053}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &290378280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290378276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b72a36811921c4685e83aefe70db22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTime: 0
+  startTimeAttack: 0
+  attackLocation: {fileID: 0}
+  attackRange: 0
+  Coin:
+    serializedVersion: 2
+    m_Bits: 0
+  scoreText: {fileID: 0}
+  scoreValue: 0
 --- !u!1 &400870231
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +767,7 @@ MonoBehaviour:
   attackLocation: {fileID: 400870232}
   attackRange: 0.8
   Coin:
+    serializedVersion: 2
     m_Bits: 512
   scoreText: {fileID: 1706942513}
   scoreValue: 0
@@ -1001,6 +1046,7 @@ GameObject:
   - component: {fileID: 1325564756}
   - component: {fileID: 1325564758}
   - component: {fileID: 1325564757}
+  - component: {fileID: 1325564759}
   m_Layer: 9
   m_Name: Coin (3)
   m_TagString: Coin
@@ -1089,6 +1135,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1325564759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325564755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b72a36811921c4685e83aefe70db22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTime: 0
+  startTimeAttack: 0
+  attackLocation: {fileID: 0}
+  attackRange: 0
+  Coin:
+    serializedVersion: 2
+    m_Bits: 0
+  scoreText: {fileID: 0}
+  scoreValue: 0
 --- !u!1 &1465184052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1301,7 @@ GameObject:
   - component: {fileID: 1658482692}
   - component: {fileID: 1658482694}
   - component: {fileID: 1658482693}
+  - component: {fileID: 1658482695}
   m_Layer: 9
   m_Name: Coin (1)
   m_TagString: Coin
@@ -1322,6 +1390,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1658482695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658482691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b72a36811921c4685e83aefe70db22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTime: 0
+  startTimeAttack: 0
+  attackLocation: {fileID: 0}
+  attackRange: 0
+  Coin:
+    serializedVersion: 2
+    m_Bits: 0
+  scoreText: {fileID: 0}
+  scoreValue: 0
 --- !u!1 &1706942511
 GameObject:
   m_ObjectHideFlags: 0

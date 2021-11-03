@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class score1111 : MonoBehaviour
+public class score : MonoBehaviour
 {
     //private Animator anim;
     public float attackTime;
