@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+
     void Movement(Vector2 move)
     {
         // Basic Collision detection
