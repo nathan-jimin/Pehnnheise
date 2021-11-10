@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
+    public float desiredx;
+    public float desiredy;
 
     // Update is called once per frame
     void Update()
@@ -20,19 +22,19 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
     void Movement(Vector2 move)
     {
         // Basic Collision detection
         if (move.magnitude < 0.00001f) return;
+        /*
         RaycastHit2D[] results = new RaycastHit2D[16];
         int count = GetComponent<Rigidbody2D>().Cast(move, results, move.magnitude + 0.001f);
         if (count > 0)
         {
             // Will be called when collide with anything
             print("collide!");
-            return;
         }
+        */
 
         // Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
@@ -62,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
         //move rigid body to new position while colliding with anything in the way
         //scales with moveSpeed as well
         //fixed delta time makes sure moveSpeed is consistent
+        desiredx = movement.x;
+        desiredy = movement.y;
         Movement(movement);
     }
 }

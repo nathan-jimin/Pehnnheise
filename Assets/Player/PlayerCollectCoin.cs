@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class score : MonoBehaviour
+public class PlayerCollectCoin : MonoBehaviour
 {
     //private Animator anim;
     public float attackTime;
@@ -25,7 +25,6 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (attackTime <= 0)
         {
             if (Input.GetButton("Jump"))
