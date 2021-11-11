@@ -1,4 +1,7 @@
-public class Enemy : MonoBehaviour
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+public class EnemyAI : MonoBehaviour
  {
          public BoxCollider territory;
          GameObject player;
