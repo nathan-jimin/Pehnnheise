@@ -1,87 +1,30 @@
-public class Enemy : MonoBehaviour
- {
-         public BoxCollider territory;
-         GameObject player;
-         bool playerInTerritory;
- 
-         public GameObject enemy;
-         BasicEnemy basicenemy;
- 
-         // Use this for initialization
-         void Start ()
-         {
-             player = GameObject.FindGameObjectWithTag ("Player");
-             basicenemy = enemy.GetComponent <BasicEnemy> ();
-             playerInTerritory = false;
-         }
-     
-         // Update is called once per frame
-         void Update ()
-         {
-             if (playerInTerritory == true)
-             {
-                 basicenemy.MoveToPlayer ();
-             }
- 
-             if (playerInTerritory == false)
-             {
-                 basicenemy.Rest ();
-             }
-         }
- 
-         void OnTriggerEnter (Collider other)
-         {
-             if (other.gameObject == player)
-             {
-                 playerInTerritory = true;
-             }
-         }
-     
-         void OnTriggerExit (Collider other)
-         {
-             if (other.gameObject == player) 
-             {
-                     playerInTerritory = false;
-             }
-         }
- }
- 
- public class BasicEnemy : MonoBehaviour
- {
-         public Transform target;
-         public float speed = 3f;
-         public float attack1Range = 1f;
-         public int attack1Damage = 1;
-         public float timeBetweenAttacks;
- 
- 
-         // Use this for initialization
-         void Start ()
-         {
-             Rest ();
-         }
-     
-         // Update is called once per frame
-         void Update ()
-         {
-             
-         }
- 
-         public void MoveToPlayer ()
-         {
-             //rotate to look at player
-             transform.LookAt (target.position);
-             transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
-         
-             //move towards player
-             if (Vector3.Distance (transform.position, target.position) > attack1Range) 
-             {
-                     transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
-             }
-         }
- 
-         public void Rest ()
-         {
- 
-         }
- }
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enemy : MonoBehaviour{
+    public Transform player;
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+
+    // Start is called before the first frame update
+    void Start(){
+        rb = this.GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update(){
+        Vector3 direction = player.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
+        direction.Normalize();
+        movement = direction;
+    }
+    private void FixedUpdate() {
+        moveCharacter(movement);
+    }
+    void moveCharacter(Vector2 direction){
+        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+}
