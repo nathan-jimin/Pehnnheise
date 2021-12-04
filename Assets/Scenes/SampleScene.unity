@@ -216,7 +216,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -247,8 +247,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400870231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8612, y: -0.0021, z: 0}
-  m_LocalScale: {x: 2.880856, y: 3.895371, z: 1}
+  m_LocalPosition: {x: -2.1043, y: 0.0721, z: 0}
+  m_LocalScale: {x: 2.3134596, y: 3.4498785, z: 1}
   m_Children: []
   m_Father: {fileID: 801394613}
   m_RootOrder: 0
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 443237129}
   m_Layer: 8
   m_Name: Enemy2 (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 724258895}
   m_Layer: 8
   m_Name: Enemy2 (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -709,6 +709,7 @@ GameObject:
   - component: {fileID: 801394615}
   - component: {fileID: 801394617}
   - component: {fileID: 801394618}
+  - component: {fileID: 801394616}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -857,6 +858,20 @@ MonoBehaviour:
   enemies:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &801394616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801394609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee3ab1a68f690c45bc598d82294a53b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 5
+  currentHP: 0
 --- !u!61 &801394617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -896,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTime: 0
-  startTimeAttack: 0.3
+  startTimeAttack: 0
   attackLocation: {fileID: 400870232}
   attackRange: 0.8
   Coin:
@@ -985,7 +1000,7 @@ GameObject:
   - component: {fileID: 1090465508}
   m_Layer: 8
   m_Name: Enemy2 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1564,7 +1579,7 @@ GameObject:
   - component: {fileID: 2006050879}
   m_Layer: 0
   m_Name: testlevel
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1628,7 +1643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006050878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0079, y: -0.0257, z: 0}
+  m_LocalPosition: {x: -0.03, y: -0.0257, z: 0}
   m_LocalScale: {x: 2.2228727, y: 1.6611294, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
