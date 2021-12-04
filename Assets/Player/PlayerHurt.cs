@@ -7,11 +7,13 @@ public class PlayerHurt : MonoBehaviour
 
     public int maxHP = 5;
     public int currentHP;
+    public SpriteRenderer img;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHP = maxHP;
+        img.enabled = false;
     }
 
     // Update is called once per frame
@@ -23,6 +25,11 @@ public class PlayerHurt : MonoBehaviour
         currentHP -= dmg;
     }
 
+    public void PlayerDeath() {
+        Debug.Log("Player has died!");
+        img.enabled = true;
+    }
+
     //called when an enemy collides with the player
     private void OnTriggerEnter2D(Collider2D other) 
     {
@@ -31,6 +38,9 @@ public class PlayerHurt : MonoBehaviour
             Debug.Log("Taken Damage!");
             TakeDamage(1);
             Destroy(other.gameObject);
+            if (currentHP <= 0) {
+                PlayerDeath();
+            }
         }
     }
 }
