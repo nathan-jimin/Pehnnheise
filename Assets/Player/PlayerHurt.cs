@@ -14,6 +14,7 @@ public class PlayerHurt : MonoBehaviour
     {
         currentHP = maxHP;
         img.enabled = false;
+        img.color = new Color(0, 0, 0, 0);
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class PlayerHurt : MonoBehaviour
     public void PlayerDeath() {
         Debug.Log("Player has died!");
         img.enabled = true;
+        img.color = new Color(0, 0, 0, 255);
     }
 
     //called when an enemy collides with the player
