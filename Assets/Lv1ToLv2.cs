@@ -11,7 +11,7 @@ public class Lv1ToLv2 : MonoBehaviour
         score = PlayerCollectCoin.scoreValue;
         if(score == 4)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
         }
     }
 }
