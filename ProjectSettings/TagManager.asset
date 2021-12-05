@@ -7,6 +7,10 @@ TagManager:
   - Coin
   - score
   - Enemy
+  - GreenDrop
+  - GreenCoin
+  - RedCoin
+  - RedDrop
   layers:
   - Default
   - TransparentFX
@@ -14,13 +18,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - GreenDropOff
   - 
   - Enemy
   - Coin
   - score
-  - 
-  - 
+  - RedCoin
+  - GreenCoin
   - 
   - 
   - 
