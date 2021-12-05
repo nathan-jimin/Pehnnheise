@@ -1374,7 +1374,7 @@ GameObject:
   - component: {fileID: 1331074811}
   - component: {fileID: 1331074810}
   m_Layer: 0
-  m_Name: GreedDropZone (2)
+  m_Name: RedDropZone (2)
   m_TagString: RedDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
