@@ -247,8 +247,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400870231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.06, y: 0.0721, z: 0}
-  m_LocalScale: {x: 2.3134596, y: 3.4498785, z: 1}
+  m_LocalPosition: {x: -3.0638, y: 0.117, z: 0}
+  m_LocalScale: {x: 1.0289246, y: 0.8454188, z: 1}
   m_Children: []
   m_Father: {fileID: 801394613}
   m_RootOrder: 0
@@ -292,9 +292,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: a58771214fe3587429a96ff4b77c1e5d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -664,7 +664,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.6, y: 2.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -678,8 +678,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801394609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3693, y: 3.0054, z: 0}
-  m_LocalScale: {x: -0.58018386, y: 0.6850516, z: 1}
+  m_LocalPosition: {x: -2.7294, y: 2.8816, z: 0}
+  m_LocalScale: {x: -0.78023124, y: 0.7795202, z: 1}
   m_Children:
   - {fileID: 400870232}
   m_Father: {fileID: 0}
@@ -719,7 +719,7 @@ MonoBehaviour:
   attackTime: 0
   startTimeAttack: 0.75
   attackLocation: {fileID: 400870232}
-  attackRange: 0.8
+  attackRange: 1
   enemies:
     serializedVersion: 2
     m_Bits: 256
@@ -751,12 +751,12 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.65, y: 3.76}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 3.6, y: 2.62}
+    newSize: {x: 3.6, y: 2.62}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
   attackTime: 0
   startTimeAttack: 0
   attackLocation: {fileID: 400870232}
-  attackRange: 0.8
+  attackRange: 1
   Coin:
     serializedVersion: 2
     m_Bits: 512
