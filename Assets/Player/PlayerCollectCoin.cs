@@ -12,7 +12,7 @@ public class PlayerCollectCoin : MonoBehaviour
 
     public Transform attackLocation;
 
-    static bool holding = false;
+    
 
     static bool green = false;
     static bool red = false;
@@ -22,8 +22,8 @@ public class PlayerCollectCoin : MonoBehaviour
 
     public Text scoreText;
     public Text Warning;
-    public int scoreValue = 0;
-
+    public static int scoreValue = 0;
+    static bool holding = false;
     // Start is called before the first frame update
     void Start()
     {
