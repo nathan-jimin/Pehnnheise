@@ -10,27 +10,36 @@ public class EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("spawn");
+        InvokeRepeating("spawn", 2.0f, 2.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            testSpawn();
+        }
     }
 
-    IEnumerator spawn()
+    void spawn()
     {
-        while (true)
-        {
-            int randEnemy = Random.Range(0, enemyPrefabs.Length);
-            int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+
+        int randEnemy = Random.Range(0, enemyPrefabs.Length);
+        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
 
 
-            Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
-            Debug.Log("enemy spawned: " + (int)Time.time);
-            yield return new WaitForSeconds(1);
-        }
+        Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+        Debug.Log("enemy spawned: " + (int)Time.time);
+
+    }
+    void testSpawn()
+    {
+        int randEnemy = Random.Range(0, enemyPrefabs.Length);
+        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+
+
+        Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
     }
 
 }

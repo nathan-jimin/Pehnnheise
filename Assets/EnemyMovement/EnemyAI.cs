@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour{
     void Start(){
         rb = this.GetComponent<Rigidbody2D>();
         moveSpeed = 5f;
+        this.player = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
