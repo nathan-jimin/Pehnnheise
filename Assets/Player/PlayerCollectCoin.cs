@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerCollectCoin : MonoBehaviour
@@ -10,24 +11,27 @@ public class PlayerCollectCoin : MonoBehaviour
     public float attackTime;
     public float startTimeAttack;
 
-    public Transform attackLocation;
+    public Transform collectLocation;
 
-    
+    public bool collecting;
 
     static bool green = false;
     static bool red = false;
     public float attackRange;
     public LayerMask Coin;
 
-
+    public bool holding;
     public Text scoreText;
-    public Text Warning;
-    public static int scoreValue = 0;
-    static bool holding = false;
+    public int scoreValue;
+    
     // Start is called before the first frame update
     void Start()
     {
         //anim = GetComponent<Animator>();
+        holding = false;
+        collecting = false;
+        this.scoreValue = 0;
+        this.scoreText.text = "Scores: " + this.scoreValue.ToString();
     }
 
     // Update is called once per frame
@@ -37,29 +41,33 @@ public class PlayerCollectCoin : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
+                attackTime = startTimeAttack;
                 if(!holding)
                 {
                     // deal damage to all enemies within attack range
-                    Collider2D[] damage = Physics2D.OverlapCircleAll(attackLocation.position, attackRange, Coin);
+                    
+                    Collider2D[] damage = Physics2D.OverlapCircleAll(collectLocation.position, attackRange, Coin);
                     for (int i = 0; i < damage.Length; i++)
                     {
+                        if (damage[i].gameObject.CompareTag("GreenCoin") || damage[i].gameObject.CompareTag("RedCoin")) {
+                            holding = true; 
+                        }
                         Destroy(damage[i].gameObject);
                         AddPoint();
+                        
                     }
-                    holding = true;
                 } 
             }
-            attackTime = startTimeAttack;
         }
         else
         {
             attackTime -= Time.deltaTime;
         }
-
-    
-        
     }
 
+    public int getScore() {
+        return this.scoreValue;
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -93,7 +101,11 @@ public class PlayerCollectCoin : MonoBehaviour
 
     public void AddPoint()
     {
-        scoreValue += 1;
-        scoreText.text = "Scores: " + scoreValue.ToString();
+        this.scoreValue += 1;
+        this.scoreText.text = "Scores: " + this.scoreValue.ToString();
+        Debug.Log(this.scoreValue); 
+        if (scoreValue >= 4) {
+            SceneManager.LoadScene(4);
+        }
     }
 }
