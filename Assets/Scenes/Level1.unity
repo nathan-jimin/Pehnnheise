@@ -1637,6 +1637,7 @@ MonoBehaviour:
   - {fileID: 249484396543585063, guid: 97b00035a223e3841b464e1a1b654aa3, type: 3}
   - {fileID: 7446327178580172559, guid: 1a4d9c7a061ced14fba75a4ce51907df, type: 3}
   - {fileID: 8589258016613046860, guid: 103b73e8d41f08c43a451aa0d946ade6, type: 3}
+  spawnRate: 2
 --- !u!4 &1433651191
 Transform:
   m_ObjectHideFlags: 0

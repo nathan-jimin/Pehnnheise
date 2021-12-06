@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHurt : MonoBehaviour
 {
@@ -66,7 +67,7 @@ public class PlayerHurt : MonoBehaviour
         Debug.Log("Player has died!");
         img.enabled = true;
         dead = true;
-        img.color = new Color(1, 1, 1, 255);
+        SceneManager.LoadScene(8);
     }
 
     //called when an enemy collides with the player
