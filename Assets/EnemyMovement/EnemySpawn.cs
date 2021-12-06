@@ -6,11 +6,12 @@ public class EnemySpawn : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
+    public float spawnRate;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("spawn", 2.0f, 2.0f);
+        InvokeRepeating("spawn", 2.0f, spawnRate);
     }
 
     // Update is called once per frame

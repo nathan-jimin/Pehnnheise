@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class PlayerCollectCoin : MonoBehaviour
+public class PlayerCollectCoinLvl2 : MonoBehaviour
 {
     //private Animator anim;
     public float attackTime;
