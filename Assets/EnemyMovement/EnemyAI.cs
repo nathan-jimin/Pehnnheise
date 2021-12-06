@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour{
     public Transform player;
-    public float moveSpeed = 5f;
+    public float moveSpeed;
     private Rigidbody2D rb;
     private Vector2 movement;
 
     // Start is called before the first frame update
     void Start(){
         rb = this.GetComponent<Rigidbody2D>();
+        moveSpeed = 5f;
     }
 
     // Update is called once per frame
@@ -20,11 +21,16 @@ public class EnemyAI : MonoBehaviour{
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
+        moveSpeed = Random.Range(3.0f, 5.0f);
     }
     private void FixedUpdate() {
         moveCharacter(movement);
     }
     void moveCharacter(Vector2 direction){
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+
+    public void setMoveSpeed(int speed) {
+        this.moveSpeed = speed;
     }
 }
