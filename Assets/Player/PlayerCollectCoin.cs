@@ -40,7 +40,6 @@ public class PlayerCollectCoin : MonoBehaviour
                 if(!holding)
                 {
                     // deal damage to all enemies within attack range
-                    print("space button pressed");
                     Collider2D[] damage = Physics2D.OverlapCircleAll(attackLocation.position, attackRange, Coin);
                     for (int i = 0; i < damage.Length; i++)
                     {
