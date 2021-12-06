@@ -104,7 +104,7 @@ public class PlayerCollectCoin : MonoBehaviour
         this.scoreValue += 1;
         this.scoreText.text = "Scores: " + this.scoreValue.ToString();
         Debug.Log(this.scoreValue); 
-        if (scoreValue >= 4) {
+        if (scoreValue >= 8) {
             SceneManager.LoadScene(4);
         }
     }
