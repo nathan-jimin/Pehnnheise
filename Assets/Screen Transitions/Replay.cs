@@ -7,6 +7,6 @@ public class Replay : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadScene(Application.loadedLevel);
+        SceneManager.LoadScene(3);
     }
 }
