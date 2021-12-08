@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class PlayerCollectCoinLvl1 : MonoBehaviour
+public class PlayerCollectCoinLvl3 : MonoBehaviour
 {
     //private Animator anim;
     public float attackTime;
@@ -124,7 +124,7 @@ public class PlayerCollectCoinLvl1 : MonoBehaviour
         Debug.Log(this.scoreValue);
         if (scoreValue >= 8)
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(9);
         }
     }
 }
