@@ -12,16 +12,15 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public LayerMask enemies;
 
-    SpriteRenderer sprite;
+    public SpriteRenderer sprite;
 
-    Color color1 = new Color(0, 0, 0, 1f);
+    Color color1 = new Color(1, 0, 0, 1f);
     Color color2 = new Color(1, 1, 1, 1);
 
     // Start is called before the first frame update
     void Start()
     {
         //anim = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

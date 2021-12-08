@@ -39,7 +39,7 @@ public class PlayerCollectCoinLvl2 : MonoBehaviour
     {
         if (attackTime <= 0)
         {
-            if (Input.GetButton("Jump"))
+           if (Input.GetKeyDown(KeyCode.E))
             {
                 attackTime = startTimeAttack;
                 if(!holding)
