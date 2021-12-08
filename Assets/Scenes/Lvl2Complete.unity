@@ -503,7 +503,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1770281189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0270783dd3179f946989297ba89efbfa, type: 3}
+  m_Script: {fileID: 11500000, guid: effd867dedc8eb34d949dda33996b8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1770281192
@@ -551,7 +551,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1770281191}
-        m_TargetAssemblyTypeName: CompleteToLvl2, Assembly-CSharp
+        m_TargetAssemblyTypeName: CompleteToLvl3, Assembly-CSharp
         m_MethodName: SceneSwitcher
         m_Mode: 1
         m_Arguments:

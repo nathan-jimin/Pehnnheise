@@ -38,8 +38,8 @@ public class PlayerCollectCoinLvl1 : MonoBehaviour
         collecting = false;
         this.scoreValue = 0;
         this.scoreText.text = "Scores: " + this.scoreValue.ToString();
-        collects[1].color = dis;
         collects[0].color = dis;
+        collects[1].color = dis;
     }
 
     // Update is called once per frame
@@ -54,6 +54,7 @@ public class PlayerCollectCoinLvl1 : MonoBehaviour
                 sprite.color = new Color(0, 0, 255, 255);
                 if (!holding)
                 {
+                    Debug.Log("Collecting");
                     // deal damage to all enemies within attack range
                     Collider2D[] damage = Physics2D.OverlapCircleAll(collectLocation.position, attackRange, Coin);
                     for (int i = 0; i < damage.Length; i++)
