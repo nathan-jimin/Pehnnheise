@@ -43,4 +43,6 @@ public class EnemySpawn : MonoBehaviour
         Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
     }
 
+
+
 }

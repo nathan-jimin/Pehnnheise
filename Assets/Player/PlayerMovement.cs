@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed;
     public Rigidbody2D rb;
     Vector2 movement;
     public float desiredx;
@@ -67,5 +67,9 @@ public class PlayerMovement : MonoBehaviour
         desiredx = movement.x;
         desiredy = movement.y;
         Movement(movement);
+    }
+
+    public void setMovespeed(int speed) {
+        this.moveSpeed = speed;
     }
 }

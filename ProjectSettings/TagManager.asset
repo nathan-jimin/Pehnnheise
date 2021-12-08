@@ -11,6 +11,8 @@ TagManager:
   - GreenCoin
   - RedCoin
   - RedDrop
+  - void
+  - safe
   layers:
   - Default
   - TransparentFX

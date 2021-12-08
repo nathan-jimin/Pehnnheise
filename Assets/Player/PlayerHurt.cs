@@ -18,6 +18,10 @@ public class PlayerHurt : MonoBehaviour
     public Image hp4;
     public Image hp5;
 
+    public PlayerMovement p;
+
+    public bool slow;
+
     private Color filled = new Color(1, 1, 1, 255);
     private Color empty = new Color(1, 0, 0, 255);
     // Start is called before the first frame update
@@ -83,6 +87,15 @@ public class PlayerHurt : MonoBehaviour
             {
                 PlayerDeath();
             }
+        }
+
+        if (other.gameObject.CompareTag("void")) {
+            Debug.Log("Slow!");
+            p.moveSpeed = 2.5f;
+        }
+
+        if (other.gameObject.CompareTag("safe")) {
+            p.moveSpeed = 5;
         }
     }
 }
